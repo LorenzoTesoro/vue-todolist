@@ -4,6 +4,10 @@
 - nell'li stabilisco una condizione rispetto alla classe: se done è true, allora applica la classe "line_throught", altrimenti no
 */
 
+/* Milestone 2:  Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
+ - icona vicino ad ogni item 
+ - @click sull'icona: il todo sparisce
+*/
 
 const { createApp } = Vue
 
@@ -35,6 +39,10 @@ createApp({
         }
     },
     methods:{
+        isDone(index){
+            // console.log('ho cliccato', index)
+            this.tasks.splice(index,1)
+        }
 
     }
 }).mount('#app')

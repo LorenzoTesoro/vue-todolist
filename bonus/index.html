@@ -21,7 +21,7 @@
             <input type="text" v-model="newTask.text" @keyup.enter="addNewTask">
             <button class="ms-2 rounded-pill" @click="addNewTask()">Aggiungi</button>
             <ul class="">
-                <li v-for="(task,index) in tasks" :class="{ line_through: task.done, '':task.done }" class="text-white">
+                <li v-for="(task,index) in tasks" :class="{ line_through: task.done, '':task.done }" class="text-white" @click="changeStatus(index)">
                     {{task.text}}
                     <i class="fa-solid fa-circle-xmark ps-2" @click="isDone(index)"></i>
                 </li>

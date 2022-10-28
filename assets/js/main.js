@@ -58,6 +58,7 @@ createApp({
         addNewTask(){
             console.log(this.newTask)
             this.tasks.push(this.newTask)
+            this.newTask = ''
             // this.tasks.push(this.newTask)
             //console.log(this.tasks.push(this.newTask.text))
             //this.tasks.push(this.newTask)

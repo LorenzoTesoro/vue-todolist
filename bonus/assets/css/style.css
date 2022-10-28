@@ -1,9 +1,7 @@
-body{
-    background-color: lightcoral;
-}
-
-
-
 .line_through{
     text-decoration: line-through;
+}
+
+body{
+    background-color: lightcoral;
 }

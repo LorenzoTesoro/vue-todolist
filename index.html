@@ -18,6 +18,8 @@
     <div id="app">
         <div class="tasks">
             <h1>TO DO</h1>
+            <input type="text" v-model="newTask">
+            <button class="ms-2 rounded-pill" @click="addNewTask()">Aggiungi</button>
             <ul>
                 <li v-for="(task,index) in tasks" :class="{ line_through: task.done, '':task.done }">
                     {{task.text}}

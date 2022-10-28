@@ -9,11 +9,21 @@
  - @click sull'icona: il todo sparisce
 */
 
+/* MILESTONE 3
+Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
+
+- markup: input + button
+- @click sul button che mi richiama una funzione 
+- funzione: cosa deve fare? pushare il nuovo todo all'inizio dell'array
+*/
+
+
 const { createApp } = Vue
 
 createApp({
     data(){
         return{
+            newTask:'',
             tasks: [
                 {
                     text:'Fare i compiti',
@@ -40,9 +50,11 @@ createApp({
     },
     methods:{
         isDone(index){
-            // console.log('ho cliccato', index)
             this.tasks.splice(index,1)
+        },
+        addNewTask(){
+            //console.log('ho cliccato')
+            this.tasks.push(this.newTask)
         }
-
     }
 }).mount('#app')

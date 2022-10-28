@@ -10,8 +10,6 @@ const { createApp } = Vue
 createApp({
     data(){
         return{
-            isDone: true,
-            notDone:false,
             tasks: [
                 {
                     text:'Fare i compiti',

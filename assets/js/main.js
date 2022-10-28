@@ -23,7 +23,10 @@ const { createApp } = Vue
 createApp({
     data(){
         return{
-            newTask:'',
+            newTask:{
+                text:'',
+                done:false
+            },
             tasks: [
                 {
                     text:'Fare i compiti',
@@ -53,8 +56,11 @@ createApp({
             this.tasks.splice(index,1)
         },
         addNewTask(){
-            //console.log('ho cliccato')
+            console.log(this.newTask)
             this.tasks.push(this.newTask)
+            // this.tasks.push(this.newTask)
+            //console.log(this.tasks.push(this.newTask.text))
+            //this.tasks.push(this.newTask)
         }
     }
 }).mount('#app')
